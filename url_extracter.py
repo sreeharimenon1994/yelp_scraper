@@ -21,6 +21,7 @@ main_url = 'https://www.yelp.co.uk'
 # main_url = 'https://www.yelp.co.uk/search?cflt=restaurants&find_loc=Warsaw'
 
 f = open("test_depth_2.txt", "a")
+
 class Scraper():
 
     def scroll(self):
@@ -82,7 +83,6 @@ class Scraper():
         super(Scraper, self).__init__()
         self.driver = webdriver.Chrome(chrome_options=chrome_options, executable_path=driver_path)
         self.driver.maximize_window()
-        # self.clear_cache()
         self.max_depth = 2
         self.scroll_wait = 0.25
         self.complete_url_set = set()
